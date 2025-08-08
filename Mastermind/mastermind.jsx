@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+const { useMemo, useState } = React;
 
 // Mastermind – Single-file React component (TailwindCSS)
 // Default export so it can be previewed immediately.
@@ -106,7 +106,7 @@ function GuessRow({ palette, guess, onSetSlot, onSubmit, canSubmit, disabled, fe
   );
 }
 
-export default function MastermindApp() {
+function MastermindApp() {
   const [palette, setPalette] = useState(defaultPalette);
   const [length, setLength] = useState(4);
   const [attempts, setAttempts] = useState(10);
@@ -339,3 +339,4 @@ export default function MastermindApp() {
     </div>
   );
 }
+window.MastermindApp = MastermindApp;
